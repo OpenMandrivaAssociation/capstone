@@ -10,7 +10,7 @@
 
 Name:           capstone
 Version:        4.0.2
-Release:        1
+Release:        2
 Summary:        A lightweight multi-platform, multi-architecture disassembly framework
 Group:          System/Libraries
 
