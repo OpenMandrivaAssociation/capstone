@@ -18,7 +18,7 @@ Group:          System/Libraries
 %global         gitname         capstone
 
 License:        BSD
-URL:            http://www.capstone-engine.org/
+URL:            https://www.capstone-engine.org/
 #               https://github.com/aquynh/capstone/releases
 #Source0:        https://github.com/%{gituser}/%{gitname}/archive/%{commit}/%{name}-%{version}-%{shortcommit}.tar.gz
 Source0:        https://github.com/%{gituser}/%{gitname}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
