@@ -25,6 +25,7 @@ Source0:        https://github.com/%{gituser}/%{gitname}/archive/%{version}.tar.
 
 %global srcname distribute
 
+BuildRequires:	make
 BuildRequires:  git
 %if %{with java}
 BuildRequires:  jna
