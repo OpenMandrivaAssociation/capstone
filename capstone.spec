@@ -9,8 +9,8 @@
 %bcond_with java
 
 Name:           capstone
-Version:        4.0.2
-Release:        3
+Version:        5.0.9
+Release:        1
 Summary:        A lightweight multi-platform, multi-architecture disassembly framework
 Group:          System/Libraries
 
