@@ -1,6 +1,6 @@
 # Please keep this package in sync with FC
 
-%global major   4
+%global major   5
 %define libname %mklibname capstone %major
 %define devname %mklibname capstone -d
 
@@ -126,7 +126,7 @@ install -D -p -m 0644 bindings/java/%{name}.jar  %{buildroot}/%{_javadir}/%{name
 %files -n %libname
 %license LICENSE.TXT LICENSE_LLVM.TXT
 %doc CREDITS.TXT ChangeLog README.md SPONSORS.TXT
-%{_libdir}/*.so.%{major}{,.*}
+%{_libdir}/*.so.%{major}*
 
 %files -n %devname
 %{_includedir}/*
