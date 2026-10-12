@@ -134,7 +134,7 @@ install -D -p -m 0644 bindings/java/%{name}.jar  %{buildroot}/%{_javadir}/%{name
 %{_libdir}/pkgconfig/*
 
 %files -n python-capstone
-%{python_sitelib}/*egg-info
+%{python_sitelib}/capstone-*.dist-info
 %{python_sitelib}/%{name}
 
 %if %{with java}
