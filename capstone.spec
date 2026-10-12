@@ -31,8 +31,9 @@ BuildRequires:  git
 BuildRequires:  jna
 BuildRequires:  java-devel
 %endif
-BuildRequires:  python-devel
-BuildRequires:  python-setuptools
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(pip)
 %global _hardened_build 1
 
 
@@ -83,12 +84,11 @@ The %{name}-java package contains java bindings for %{name}.
 %autosetup -n %{gitname}-%{version} -S git
 
 %build
-DESTDIR="%{buildroot}" 	V=1 CFLAGS="%{optflags}" \
+V=1 CFLAGS="%{optflags}" \
 LIBDIRARCH="%{_lib}" INCDIR="%{_includedir}" \
 make PYTHON3=%{__python} %{?_smp_mflags}
 
-# Fix pkgconfig file
-sed -i 's;%{buildroot};;' capstone.pc
+# The generated pkgconfig file lists the static archive.
 grep -v archive capstone.pc > capstone.pc.tmp
 mv capstone.pc.tmp capstone.pc
 
